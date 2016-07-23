@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	<link rel="stylesheet" href="css/contact.css">
+	<link rel="stylesheets" href="jquery-ui-1.12.0/jquery-ui.css">
+	<script src="jquery-ui-1.12.0.custom/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.12.0.custom/jquery-ui.js"></script>
+
+	<script>
+		$(document).ready(function(){
+	setInterval(function(){
+	var dateTime = new Date();
+	var minutesTwoDigitsWithLeadingZero = ("0" + dateTime.getMinutes()).substr(-2);
+	// $('#milliseconds').text(dateTime.getMilliseconds());
+	$('#seconds').text(dateTime.getSeconds());
+	$('#minutes').text(minutesTwoDigitsWithLeadingZero);
+	$('#hours').text(dateTime.getHours());
+		}, 100);
+	});	
+	 </script>
+
+<style>
+	 	/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: black; /* Fallback color */
+    background-color: black; /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: teal;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;
+background-color: white;
+color: black;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: teal;
+    color: white;
+}
+	 </style>
+</head>
+
+<body>
+	<nav>
+	<ul>
+	<li class="navlogo"><img src="images/sotnav.jpg" width="40" height="50"></li>
+	<li class="home"><a href="home.html">Home</li>
+	<li class="sep1">|</li>
+	<li class="about"><a href="about.html">About</li>
+	<li class="sep2">|</li>
+	<li class="contact"><a href="#">Contact</a></li>
+	<li class="sep3">|</li>
+	<li class="shop"><a href="shop.html">Buy</a></li>
+
+		<ul>
+				<div id="clock">
+		<span id="hours"></span>
+		:
+		<span id="minutes"></span>
+
+		<!-- <span id="seconds"></span> -->
+		<!-- <span id="milliseconds"></span> -->
+		</div>
+		</ul>
+
+	</ul>
+	</nav>
+
+	<div class="content">
+		<h1>Soteria</h1>
+
+
+	<h3 class="subtitle">Contact</h3>
+
+	<div class="subcont">
+	<p class="contact1">
+	<!-- all of our emails -->
+	<h5>Emails</h5>
+		<ul>
+			<li>aking@nightingale.org</li>
+			<li>brollins@nightingale.org</li>
+			<li>csola@nightingale.org</li>
+			<li>jspanfeller@nightingale.org</li>
+			<li>kmgraham@nightingale.org</li>
+			<li>zrose@nightingale.org</li>
+		</ul>
+	<!-- pic of nightingale building -->
+	</p>
+
+	<img class="img" src="images/nightingale.jpg" width="200" height="200">
+
+	</div>
+	</div>
+
+
+
+
+	<footer>
+<h6 style="text-indent:40px">Contact us at:</h6>
+	<ul>
+		<li>Address:   20 East 92nd Street</li>
+		<li>Phone:   212 289 5020</li> 
+		<li>Fax:   212 220 2647</li>
+	</ul>
+</footer>
+
+</body>
+</html>
