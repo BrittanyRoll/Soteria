@@ -1,0 +1,103 @@
+body{
+	background-color: white;
+}
+
+/*nav bar stuff*/
+nav{
+	width: 100%;
+	height: 60px;
+	background-color: black;
+	margin-bottom: 0;
+}
+
+.home, .sep1, .about, .sep2, .contact, .sep3, .shop{
+	float: left;
+	list-style-type: none;
+	padding-left: 10px;
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 15px;
+	color: white;
+}
+
+.navlogo{
+	float: left;
+	margin-right: 15px;
+	margin-top: 5px;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+#clock{
+	float: right;
+	margin-top: 20px;
+	padding-right: 20px;
+	color: white;
+}
+
+.content{
+	background-color: teal;
+	margin-bottom: 70px;
+	width: 1075px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 1200px;
+	font-family: 'Futura', sans-serif;
+}
+
+.title{
+	text-align: center;
+	font-size: 200px;
+	color: black;
+	margin-bottom: 20px;
+	font-family: 'Futura', sans-serif;
+	border-bottom: 7px solid white;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+.pitch{
+	width: 850px;
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black;
+	margin-top: 50px;
+}
+
+.why{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h3{
+	text-align: center;
+	color: white;
+}
+
+p{
+	text-indent: 50px;
+	color: black;
+}
+
+h4{
+	text-indent: 50px;
+	color: white;
+}
+
+#descrip{
+	text-indent: 20px;
+}
+
+li{
+	list-style-type: none;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soteria</title>
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheets" href="jquery-ui-1.12.0/jquery-ui.css">
+	<script src="jquery-ui-1.12.0.custom/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.12.0.custom/jquery-ui.js"></script>
+
+	<script>
+		$(document).ready(function(){
+	setInterval(function(){
+	var dateTime = new Date();
+	var minutesTwoDigitsWithLeadingZero = ("0" + dateTime.getMinutes()).substr(-2);
+	// $('#milliseconds').text(dateTime.getMilliseconds());
+	$('#seconds').text(dateTime.getSeconds());
+	$('#minutes').text(minutesTwoDigitsWithLeadingZero);
+	$('#hours').text(dateTime.getHours());
+		}, 100);
+	});	
+	 </script>
+</head>
+<body>
+	<nav>
+	<ul>
+	<li class="navlogo"><img src="images/sotnav.jpg" width="30" height="50"></li>
+	<li class="home"><a href="#">Home</li>
+	<li class="sep1">|</li>
+	<li class="about"><a href="about.html">About</li>
+	<li class="sep2">|</li>
+	<li class="contact"><a href="contact.html">Contact</a></li>
+	<li class="sep3">|</li>
+	<li class="shop"><a href="shop.html">Buy</a></li>
+
+		<ul>
+				<div id="clock">
+		<span id="hours"></span>
+		:
+		<span id="minutes"></span>
+
+		<!-- <span id="seconds"></span> -->
+		<!-- <span id="milliseconds"></span> -->
+		</div>
+		</ul>
+
+	</ul>
+	</nav>
+
+<div class="content">
+<p class="title">Soteria</p>
+
+<img src="images/soterialogo.jpg" height="370" width="375">
+
+<div class="pitch">
+	<h3>Do I want to look good or be safe?</h3>
+	<p class="why">For most girls that is the question that runs through their minds as they get ready to go out. Whether they're going to school or to a party, they are tasked with the burden of dressing while also having to consider the potential rapists they might come across. One in five women will be sexually assualted (many because of spiked drinks). There are lower numbers for this, but sexual assualt due to spiked drinks (does happen to?) men (people who don't indentify as female?) as well. 
+	</p>
+
+	<h4 class="slogan">As cringeworthy as it sounds:</h4> 
+	<p>
+	With Soteria you won't have to choose between looking good and being safe!
+	</p>
+	<h4 class="descrip">What is Soteria:</h4>
+	<div id="descrip">
+		<ul>
+			<li>1. a fashionable bracelet</li>
+			<li>2. a panic button</li>
+			<li>3. a roofie detactor</li>
+			<li>4. a way to protect young people from potential threats as they have fun or (go about their business)</li>
+		</ul>
+	</div>
+</div>
+</div>
+
+
+</body>
+</html>
