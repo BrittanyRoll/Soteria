@@ -101,3 +101,35 @@ h4{
 li{
 	list-style-type: none;
 }
+
+
+
+
+
+footer{
+	margin-left: 0;
+	width: 2000px;
+	height: 150px;
+	background-color: black;
+	font-family: 'Lato', sans-serif;
+}
+
+h6{
+	font-family: 'Lato', sans-serif;
+	background-color: black;
+	margin-bottom: 0;
+	color: white;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+footer ul li{
+	font-family: 'Lato', sans-serif;
+	list-style-type: none;
+	margin-left: 30px;
+	color: white;
+}
+
+ul{
+	color: white;
+}
