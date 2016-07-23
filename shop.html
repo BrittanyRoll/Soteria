@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shop</title>
+	<link rel="stylesheet" href="css/shop.css">
+	<link rel="stylesheets" href="jquery-ui-1.12.0/jquery-ui.css">
+	<script src="jquery-ui-1.12.0.custom/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.12.0.custom/jquery-ui.js"></script>
+
+	<script>
+		$(document).ready(function(){
+	setInterval(function(){
+	var dateTime = new Date();
+	var minutesTwoDigitsWithLeadingZero = ("0" + dateTime.getMinutes()).substr(-2);
+	// $('#milliseconds').text(dateTime.getMilliseconds());
+	$('#seconds').text(dateTime.getSeconds());
+	$('#minutes').text(minutesTwoDigitsWithLeadingZero);
+	$('#hours').text(dateTime.getHours());
+		}, 100);
+	});	
+	 </script>
+
+</head>
+
+
+
+
+<body>
+	<nav>
+	<ul>
+	<li class="navlogo"><img src="images/sotnav.jpg" width="40" height="50"></li>
+	<li class="home"><a href="home.html">Home</li>
+	<li class="sep1">|</li>
+	<li class="about"><a href="about.html">About</li>
+	<li class="sep2">|</li>
+	<li class="contact"><a href="#">Contact</a></li>
+	<li class="sep3">|</li>
+	<li class="shop"><a href="shop.html">Buy</a></li>
+
+		<ul>
+				<div id="clock">
+		<span id="hours"></span>
+		:
+		<span id="minutes"></span>
+
+		<!-- <span id="seconds"></span> -->
+		<!-- <span id="milliseconds"></span> -->
+		</div>
+		</ul>
+
+	</ul>
+	</nav>
+
+	<!-- body -->
+	<div class="content">
+		<h1>Soteria</h1>
+
+
+	<h3 class="subtitle">Shop</h3>
+	<div class="subcont">
+	<p class="contact1">
+	
+	<h5>Jewelry</h5>
+	<!-- image gallery -->
+		
+	</p>
+
+
+	</div>
+	</div>
+
+
+
+
+	<footer>
+<h6 style="text-indent:40px">Contact us at:</h6>
+	<ul>
+		<li>Address:   20 East 92nd Street</li>
+		<li>Phone:   212 289 5020</li> 
+		<li>Fax:   212 220 2647</li>
+	</ul>
+</footer>
+
+</body>
+</html>
