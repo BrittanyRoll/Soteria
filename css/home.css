@@ -109,7 +109,7 @@ li{
 footer{
 	margin-left: 0;
 	width: 2000px;
-	height: 150px;
+	height: 220px;
 	background-color: black;
 	font-family: 'Lato', sans-serif;
 }
@@ -132,4 +132,8 @@ footer ul li{
 
 ul{
 	color: white;
+}
+
+.share{
+	margin-left: 40px;
 }

@@ -130,7 +130,7 @@ color: black;}
 	<div class="subcont">
 	<p class="contact1">
 	<!-- all of our emails -->
-	<h5>Emails</h5>
+	<h5>Contact us for Business Inquiries at:</h5>
 		<ul>
 			<li>aking@nightingale.org</li>
 			<li>brollins@nightingale.org</li>
@@ -144,7 +144,27 @@ color: black;}
 
 	<img class="img" src="images/nightingale.jpg" width="200" height="200">
 
+
+	<div class="comment">
+	<h2>Comment Form</h2>
+	<form method='post'>
+  NAME: <br><input type='text' name='name' id='name' /><br />
+
+  Email: <br /><input type='text' name='email' id='email' /><br />
+
+  Website: <br><input type='text' name='website' id='website' /><br />
+
+  Comment:<br />
+  <textarea name='comment' id='comment'></textarea><br />
+
+  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+
+  <input type='submit' value='Submit' />  
+</form>
 	</div>
+
+	</div>
+	
 	</div>
 
 
@@ -157,6 +177,18 @@ color: black;}
 		<li>Phone:   212 289 5020</li> 
 		<li>Fax:   212 220 2647</li>
 	</ul>
+
+	 <h6 style="text-indent:40px">Share our page!</h6>
+<!-- AddToAny BEGIN -->
+<div class="share">
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+</div>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
 </footer>
 
 </body>

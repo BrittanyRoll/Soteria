@@ -1,21 +1,35 @@
-<!DOCTYPE html>
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END --><!DOCTYPE html>
 <html>
 <head>
-	<title>Modal</title>
+	<title>Lightbox</title>
+	<link rel="stylesheet" href="css/lb.css">
 	<link rel="stylesheets" href="jquery-ui-1.12.0/jquery-ui.css">
 	<script src="jquery-ui-1.12.0.custom/external/jquery/jquery.js"></script>
 	<script src="jquery-ui-1.12.0.custom/jquery-ui.js"></script>
 
-	<style>
-		.i1, .i2{
-			display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-		}
-	</style>
+	 <script>
+    $( function() {
+    $( "#selectable" ).selectable({
+      stop: function() {
+        var result = $( "#select-result" ).empty();
+        $( ".ui-selected", this ).each(function() {
+          var index = $( "#selectable li" ).index( this );
+          result.append( " #" + ( index + 1 ) );
+        });
+      }
+    });
+  } );
+</script>
 
-	<style>
+ <style>
 	 	/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -32,7 +46,7 @@
 }
 
 /* Modal Content */
-.modal-content11 {
+.modal-content {
     position: relative;
     background-color: #fefefe;
     margin: auto;
@@ -58,7 +72,7 @@
 }
 
 /* The Close Button */
-.close11 {
+.close {
     color: black;
     float: right;
     font-size: 28px;
@@ -66,53 +80,56 @@
     margin-top: 0px;
 }
 
-.close11:hover,
-.close11:focus {
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
-.modal-header11 {
+.modal-header {
     padding: 2px 16px;
     height: 35px;
     background-color: teal;
     color: white;
 }
 
-.modal-body11 {padding: 2px 16px;
+.modal-body {padding: 2px 16px;
 background-color: white;
 color: black;
 
 }
 
-.modal-footer11 {
+.modal-footer {
     padding: 2px 16px;
     background-color: teal;
     color: white;
 }
 	 </style>
-
-
-   
 </head>
 <body>
 
-<button id="myBtn11"><img class="i11" src="images/ear2.jpg" width="300px" height="300px"></button>
 
-<div id="myModal11" class="modal11">
+
+<button id="myBtn"><img class="img1" src="images/brace1.jpg" width="200px" height="200px"></button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content11">
-    <div class="modal-header11">
-      <span class="close11">x</span>
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">x</span>
       <h2></h2>
     </div>
-    <div class="modal-body11">
-      <p><img src="images/ear2.jpg" width="300px" height="300px"></p>
+    <div class="modal-body">
+      <p><img class="i1" src="images/brace1.jpg" width="300px" height="300px"></p>
     </div>
+        <p id="feedback">
+<span></span> <span id="select-result"></span>
+</p>
  
-    <div class="modal-footer11">
+    <div class="modal-footer">
       <h3></h3>
     </div>
   </div>
@@ -121,40 +138,38 @@ color: black;
 
 
 
-	
+
+
 
 
 
 
 <script>
 	// Get the modal
-var modal = document.getElementById('myModal11');
+var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn11");
+var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close11")[0];
+var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal 
-img.hover = function() {
+btn.onclick = function() {
     modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.hover = function() {
+span.onclick = function() {
     modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.hover = function(event) {
+window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 };
 </script>
-
-
-
 </body>
 </html>

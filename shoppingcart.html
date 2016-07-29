@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="css/sc.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+
+
+<body>
+
+<div class="w3-content" style="max-width:800px;position:relative">
+
+<div class="w3-display-container mySlides">
+  <img src="images/brace1.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Silver Chain Bracelet ($25)
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/brace3.jpg" style="width:100%">
+  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+    Gold Chain Bracelet ($25)
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/brace4.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+    Gold chain Bracelet with Charms ($25)
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img_forest.jpg" style="width:100%">
+  <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+    The Rain Forest
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img_mountains.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+    Mountains!
+  </div>
+</div>
+
+<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="images/brace1.jpg" alt="Preview image">
+					<!-- other product images here -->
+				
+ </div> <!-- .cd-customization -->
+ 
+			<button class="cd-customization-trigger">Add to cart</button>
+		</div> <!-- .cd-single-item -->
+ 
+		<div class="cd-item-info">
+			<b><a href="#0">Silver Chain Bracelet</a></b>
+			<em>$25</em>
+		</div> <!-- cd-item-info -->
+	 <!-- cd-gallery -->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+<script>
+function resetCustomization(selectOptions) {
+	//add .hover class to the item user is interacting with
+	//close ul.color/ul.size if they were left open and user is not interacting with them anymore
+	//remove the .hover class from items if user is interacting with a different one
+	selectOptions.siblings('[data-type="select"]').removeClass('is-open').end().parents('.cd-single-item').addClass('hover').parent('li').siblings('li').find('.cd-single-item').removeClass('hover').end().find('[data-type="select"]').removeClass('is-open');
+}
+</script>
+
+</body>
+</html>

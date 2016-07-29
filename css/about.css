@@ -27,6 +27,7 @@ nav{
 	float: left;
 	margin-right: 15px;
 	margin-top: 5px;
+	list-style-type: none;
 }
 
 a{
@@ -47,7 +48,7 @@ a{
 	width: 1075px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 4500px;
+	height: 4650px;
 	font-family: 'Futura', sans-serif;
 }
 
@@ -101,6 +102,7 @@ h1{
 	margin-right: auto;
 	border: 1px solid black;
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 
@@ -180,6 +182,10 @@ h1{
 	margin-top: 10px;
 }
 
+li{
+	color: white;
+}
+
 .img4{
 	display: block;
 	margin-top: 20px;
@@ -216,6 +222,16 @@ video{
 	display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.prices{
+	font-size: 60px;
+	color: white;
+}
+
+#cost{
+	list-style-type: none;
+	font-size: 30px;
 }
 
 
@@ -257,6 +273,17 @@ video{
 	margin-right: auto;
 }
 
+.tt{
+	background-color: teal;
+	margin-left: 350px;
+	color: black;
+	text-decoration: underline;
+}
+
+.twitter-timeline{
+	margin-left: 80px;
+}
+
 
 
 /*footer with contact info*/
@@ -267,6 +294,7 @@ footer{
 	height: 190px;
 	background-color: black;
 	font-family: 'Lato', sans-serif;
+	margin-top: 10px;
 }
 
 button{
@@ -274,6 +302,10 @@ button{
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
+}
+
+.ui-widget-content{
+	color: black;
 }
 
 h6{
@@ -285,12 +317,12 @@ h6{
 	margin-top: 50px;
 }
 
-footer ul li{
-	font-family: 'Lato', sans-serif;
-	list-style-type: none;
-	margin-left: 30px;
-	color: white;
-}
+/*footer ul li{*/
+	/*font-family: 'Lato', sans-serif;*/
+	/*list-style-type: none;*/
+	/*margin-left: 30px;*/
+	/*color: white;*/
+/*}*/
 
 video{
 	border: 3px solid white;
@@ -298,6 +330,10 @@ video{
 
 .c1{
 	float: left;
+}
+
+.share{
+	margin-left: 40px;
 }
 
 

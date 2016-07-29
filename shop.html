@@ -20,11 +20,190 @@
 	});	
 	 </script>
 
+	 <script>
+    $( function() {
+    $( "#selectable" ).selectable({
+      stop: function() {
+        var result = $( "#select-result" ).empty();
+        $( ".ui-selected", this ).each(function() {
+          var index = $( "#selectable li" ).index( this );
+          result.append( " #" + ( index + 1 ) );
+        });
+      }
+    });
+  } );
+</script>
+
+    <style>
+        .hovereffect {
+width:200px;
+height:200px;
+float:left;
+overflow:hidden;
+position:relative;
+text-align:center;
+cursor:default;
+}
+
+.hovereffect .overlay {
+width:200px;
+height:200px;
+position:absolute;
+overflow:hidden;
+top:0;
+left:0;
+opacity:0;
+background-color:rgba(0,0,0,0.5);
+-webkit-transition:all .4s ease-in-out;
+transition:all .4s ease-in-out
+}
+
+.hovereffect img {
+display:block;
+position:relative;
+-webkit-transition:all .4s linear;
+transition:all .4s linear;
+}
+
+.hovereffect h2 {
+text-transform:uppercase;
+color:#fff;
+text-align:center;
+position:relative;
+font-size:17px;
+background:rgba(0,0,0,0.6);
+-webkit-transform:translatey(-100px);
+-ms-transform:translatey(-100px);
+transform:translatey(-100px);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+padding:10px;
+}
+
+.hovereffect a.info {
+text-decoration:none;
+display:inline-block;
+text-transform:uppercase;
+color:#fff;
+border:1px solid #fff;
+background-color:transparent;
+opacity:0;
+filter:alpha(opacity=0);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+margin:50px 0 0;
+padding:7px 14px;
+}
+
+.hovereffect a.info:hover {
+box-shadow:0 0 5px #fff;
+}
+
+.hovereffect:hover img {
+-ms-transform:scale(1.2);
+-webkit-transform:scale(1.2);
+transform:scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+opacity:1;
+filter:alpha(opacity=100);
+}
+
+.hovereffect:hover h2,.hovereffect:hover a.info {
+opacity:1;
+filter:alpha(opacity=100);
+-ms-transform:translatey(0);
+-webkit-transform:translatey(0);
+transform:translatey(0);
+}
+
+.hovereffect:hover a.info {
+-webkit-transition-delay:.2s;
+transition-delay:.2s;
+}
+    </style>
+
+<style>
+	 	/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: black; /* Fallback color */
+    background-color: black; /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    height: 35px;
+    background-color: teal;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;
+background-color: white;
+color: black;
+
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: teal;
+    color: white;
+}
+	 </style>
+
+
 </head>
-
-
-
-
 <body>
 	<nav>
 	<ul>
@@ -33,9 +212,9 @@
 	<li class="sep1">|</li>
 	<li class="about"><a href="about.html">About</li>
 	<li class="sep2">|</li>
-	<li class="contact"><a href="#">Contact</a></li>
+	<li class="contact"><a href="contact.html">Contact</a></li>
 	<li class="sep3">|</li>
-	<li class="shop"><a href="shop.html">Buy</a></li>
+	<li class="shop"><a href="#">Buy</a></li>
 
 		<ul>
 				<div id="clock">
@@ -56,42 +235,323 @@
 		<h1>Soteria</h1>
 
 
-	<h3 class="subtitle">Shop</h3>
+	<h3 class="subtitle">Jewelry</h3>
 	<div class="subcont">
 	<p class="contact1">
 	
-	<h5>Jewelry</h5>
+
 	<!-- image gallery -->
 	<!-- 275 width, 275 height, 6 or 9 images -->
-	<img class="img1" src="images/brace1.jpg" width="200px" height="200px">
-	<img class="img2" src="images/brac3.jpg" width="200px" height="200px">
-	<img class="img3" src="images/brac4.jpg" width="200px" height="200px">
-	<img class="img4" src="images/neck1.jpg" width="200px" height="200px">	
-	<img class="img5" src="images/neck2.jpg" width="200px" height="200px">
-	<img class="img6" src="images/neck3.jpg" width="200px" height="200px">
-	<img class="img7" src="images/brac5.jpg" width="200px" height="200px">
-	<img class="img8" src="images/ring1.jpg" width="200px" height="200px">
-	<img class="img9" src="images/ring2.jpg" width="200px" height="200px">
-	<img class="img10" src="images/ear1.jpg" width="200px" height="200px">
-	<img class="img11" src="images/ear2.jpg" width="200px" height="200px">
-	<img class="img12" src="images/ear3.jpg" width="200px" height="200px">
-	</p>
+
+	<!-- image1 -->
+
+    
+	 <div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img1" src="images/brace1.jpg" width="200" height="200">
+        <div class="overlay">
+           <h2>Silver Chain Bracelet ($30 with Panic Button) ($25 without)</h2>
+           <form name=myform>
+<input type=button value="Add to Cart" 
+onClick="alert('Item Added to Cart!')">
+</form>
+        </div>
+    </div>
+</div> 
+            <!-- <em>$25</em> -->
+    <!-- <button class="cd-customization-trigger">Add to cart</button> -->
+     <div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img2" src="images/brac3.jpg" width="200px" height="200px">
+        <div class="overlay">
+           <h2>Gold Chain Bracelet ($30 with Panic Button) ($25 without)</h2>
+           <form name=myform>
+          <input type=button value="Add to Cart" 
+          onClick="alert('Item Added to Cart!')">
+          </form>
+           <!-- <button>Add to Cart</button> -->
+        </div>
+    </div>
+</div> 
+
+    
+
+<div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img3" src="images/brac4.jpg" width="200px" height="200px">
+        <div class="overlay">
+           <h2>Gold Chain Bracelet with Charms ($30 with Panic Button) ($25 without)</h2>
+          <form name=myform>
+        <input type=button value="Add to Cart" 
+        onClick="alert('Item Added to Cart!')">
+        </form>
+        </div>
+    </div>
+</div>
+    
+
+<div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img4" src="images/neck1.jpg" width="200px" height="200px">
+        <div class="overlay">
+           <h2>Rose Gold Necklace with Rose Gold Pendant (Panic Button) ($25)</h2>
+          <form name=myform>
+        <input type=button value="Add to Cart" 
+        onClick="alert('Item Added to Cart!')">
+        </form>
+        </div>
+    </div>
+</div>
+
+    
+
+<div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img5" src="images/neck2.jpg" width="200px" height="200px">
+        <div class="overlay">
+           <h2>Gold Necklace with Gold Pendant of Initial (Panic Button) ($25)</h2>
+           <form name=myform>
+          <input type=button value="Add to Cart" 
+          onClick="alert('Item Added to Cart!')">
+          </form>
+        </div>
+    </div>
+</div>
+    
 
 
-	</div>
-	</div>
+<div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img6" src="images/neck3.jpg" width="200px" height="200px">
+        <div class="overlay">
+           <h2>Gold Bracelet with Gold Heart Pendant (Panic Button) ($25)</h2>
+          <form name=myform>
+          <input type=button value="Add to Cart" 
+          onClick="alert('Item Added to Cart!')">
+          </form>
+        </div>
+    </div>
+</div>
+    
+
+
+<div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img7" src="images/brac5.jpg" width="200px" height="200px">
+        <div class="overlay">
+           <h2>Double Band Rose Gold Ring with Two Gems (Panic Button) ($25)</h2>
+           <form name=myform>
+<input type=button value="Add to Cart" 
+onClick="alert('Item Added to Cart!')">
+</form>
+        </div>
+    </div>
+</div>
+    
 
 
 
+<div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img8" src="images/ring1.jpg" width="200px" height="200px">
+        <div class="overlay">
+           <h2>Double Band Rose Gold Ring with Two Gems (Panic Button) ($20)</h2>
+           <form name=myform>
+<input type=button value="Add to Cart" 
+onClick="alert('Item Added to Cart!')">
+</form>
+        </div>
+    </div>
+</div>
+    
 
-	<footer>
+
+
+<div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img9" src="images/ring2.jpg" width="200px" height="200px">
+        <div class="overlay">
+           <h2>Rose Gold Ring with One Stone (Panic Button) ($20)</h2>
+           <form name=myform>
+<input type=button value="Add to Cart" 
+onClick="alert('Item Added to Cart!')">
+</form>
+        </div>
+    </div>
+</div>
+    
+
+
+
+<div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img10" src="images/ear1.jpg" width="200px" height="200px">
+        <div class="overlay">
+           <h2>Pearl Earrings (Panic Button) ($20)</h2>
+           <form name=myform>
+<input type=button value="Add to Cart" 
+onClick="alert('Item Added to Cart!')">
+</form>
+        </div>
+    </div>
+</div>
+    
+
+
+
+<div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img11" src="images/ear2.jpg" width="200px" height="200px">
+        <div class="overlay">
+           <h2>Holographic Pearl Earrings (Panic Button) ($20)</h2>
+           <form name=myform>
+<input type=button value="Add to Cart" 
+onClick="alert('Item Added to Cart!')">
+</form>
+        </div>
+    </div>
+</div>
+    
+
+
+<div width="200px" height="200px">
+    <div class="hovereffect">
+        <img class="img12" src="images/ear3.jpg" width="200px" height="200px">
+        <div class="overlay">
+           <h2>Diamond Earrings with Gold (Panic Button) ($20)</h2>
+           <form name=myform>
+<input type=button value="Add to Cart" 
+onClick="alert('Item Added to Cart!')">
+</form>
+        </div>
+    </div>
+</div>
+    
+
+
+    <button id="myBtn">View Jewelry</button>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">x</span>
+      <h2></h2>
+    </div>
+    <div class="modal-body">
+        
+
+        <img class="mySlides" src="images/brace1.jpg">
+        <img class="mySlides" src="images/brac3.jpg">
+        <img class="mySlides" src="images/brac4.jpg">
+        <img class="mySlides" src="images/neck1.jpg">
+        <img class="mySlides" src="images/neck2.jpg">
+        <img class="mySlides" src="images/neck3.jpg">
+        <img class="mySlides" src="images/brac5.jpg">
+        <img class="mySlides" src="images/ring1.jpg">
+        <img class="mySlides" src="images/ring2.jpg">
+        <img class="mySlides" src="images/ear1.jpg">
+        <img class="mySlides" src="images/ear2.jpg">
+        <img class="mySlides" src="images/ear3.jpg">
+<div class="modal-footer">
+      <h2>
+        <a class="w3-btn-floating1" onclick="plusDivs(-1)">&#10094;</a>
+        <a class="w3-btn-floating2" onclick="plusDivs(+1)">&#10095;</a>
+      </h2>
+    </div>
+  </div>
+</div>
+</p>
+</div>
+</div>
+</p>
+</div>
+
+
+
+<!-- images/ear3.jpg -->
+
+	
+
+<footer>
 <h6 style="text-indent:40px">Contact us at:</h6>
 	<ul>
 		<li>Address:   20 East 92nd Street</li>
 		<li>Phone:   212 289 5020</li> 
 		<li>Fax:   212 220 2647</li>
 	</ul>
+
+   <h6 style="text-indent:40px">Share our page!</h6>
+<!-- AddToAny BEGIN -->
+<div class="share">
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+</div>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+<!-- AddToAny END -->
+
+<!-- add sharing option -->
 </footer>
+
+
+
+
+
+<script>
+	// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+</script>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    x[slideIndex-1].style.display = "block"; 
+}
+</script>
+
+
 
 </body>
 </html>

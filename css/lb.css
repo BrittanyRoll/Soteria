@@ -1,0 +1,13 @@
+body{
+	background-color: lavender;
+}
+
+.i1head{
+	width: 100%;
+}
+
+.i1{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
